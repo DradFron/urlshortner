@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>shortURL</title>
+</head>
+<body>
+<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+<form>
+    <label>输入网址：</label>
+    <div>
+        <textarea name="sourceUrl" th:text="${shortUrl}"></textarea>
+    </div>
+    <div>
+        <button  type="submit" >缩短</button>
+    </div>
+</form>
+</body>
+</html>
